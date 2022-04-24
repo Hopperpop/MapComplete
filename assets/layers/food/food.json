@@ -372,7 +372,7 @@
           }
         }
       ],
-      "condition": "cuisine!=friture",
+      "condition": "cuisine!~(.*;)?friture(;.*)?",
       "id": "Vegetarian (no friture)"
     },
     {
@@ -410,7 +410,7 @@
           }
         }
       ],
-      "condition": "cuisine!=friture",
+      "condition": "cuisine!~(.*;)?friture(;.*)?",
       "id": "Vegan (no friture)"
     },
     {
@@ -453,7 +453,7 @@
           }
         }
       ],
-      "condition": "cuisine!=friture",
+      "condition": "cuisine!~(.*;)?friture(;.*)?",
       "id": "halal (no friture)"
     },
     {
@@ -490,7 +490,7 @@
           }
         }
       ],
-      "condition": "cuisine=friture"
+      "condition": "cuisine~(.*;)?friture(;.*)?"
     },
     {
       "id": "friture-vegan",
@@ -525,7 +525,7 @@
           }
         }
       ],
-      "condition": "cuisine=friture"
+      "condition": "cuisine~(.*;)?friture(;.*)?"
     },
     {
       "id": "friture-oil",
@@ -552,7 +552,7 @@
           }
         }
       ],
-      "condition": "cuisine=friture"
+      "condition": "cuisine~(.*;)?friture(;.*)?"
     },
     {
       "id": "friture-take-your-container",
@@ -596,7 +596,7 @@
           }
         }
       ],
-      "condition": "cuisine=friture"
+      "condition": "cuisine~(.*;)?friture(;.*)?"
     },
     "service:electricity",
     "dog-access",
@@ -701,7 +701,7 @@
             "if": {
               "and": [
                 "amenity=fast_food",
-                "cuisine=friture"
+                "cuisine~(.*;)?friture(;.*)?"
               ]
             },
             "then": "circle:white;./assets/layers/food/fries.svg"
